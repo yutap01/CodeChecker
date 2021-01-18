@@ -1,0 +1,16 @@
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\Diagnostic.nuspec
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\tools\install.ps1
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\tools\uninstall.ps1
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\RoslynDemo.dll
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\RoslynDemo.pdb
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\Microsoft.CodeAnalysis.dll
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\System.Collections.Immutable.dll
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\System.Reflection.Metadata.dll
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\Microsoft.CodeAnalysis.xml
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\System.Collections.Immutable.xml
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\bin\Debug\System.Reflection.Metadata.xml
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\obj\Debug\RoslynDemo.Resources.resources
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\obj\Debug\RoslynDemo.csproj.GenerateResource.Cache
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\obj\Debug\RoslynDemo.dll
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\obj\Debug\RoslynDemo.pdb
+D:\projects\RoslynDemo\RoslynDemo\RoslynDemo\obj\Debug\RoslynDemo.csprojResolveAssemblyReference.cache
