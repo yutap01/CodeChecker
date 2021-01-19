@@ -39,6 +39,8 @@
     <Compile Include="ContainUnderscorePropertyNameCodeFixProvider.cs" />
     <Compile Include="ContainUnderscoreTypeNameCodeFIxProvider.cs" />
     <Compile Include="ContainUnderscorePropertyNameAnalyzer.cs" />
+    <Compile Include="Delegates\Functions.cs" />
+    <Compile Include="Delegates\Predicates.cs" />
     <Compile Include="MethodNameAnalyzer.cs" />
     <Compile Include="MethodNameCodeFixProvider.cs" />
     <Compile Include="NameAnalyzer.cs" />

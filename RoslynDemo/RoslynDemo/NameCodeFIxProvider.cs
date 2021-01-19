@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 
 namespace CodeChecker
 {
-    //[ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(NameCodeFixProvider)), Shared]
     public abstract class NameCodeFixProvider : CodeFixProvider
     {
         //修正対象の名前に対する修正後の名前を提供します。

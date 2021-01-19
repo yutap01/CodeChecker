@@ -2,6 +2,7 @@
 using Microsoft.CodeAnalysis.CodeFixes;
 using CodeChecker.Defines;
 using System.Composition;
+using CodeChecker.Delegates;
 
 namespace CodeChecker
 {
@@ -12,7 +13,7 @@ namespace CodeChecker
         protected override string AnalyzerId => Define.ID_CONTAIN_UNDERSCORE_PROPERTY_NAME_ANALYZER;
 
         protected override string newName(string oldName) {
-            return oldName.Replace("_", "");
+            return Functions.DeleteUnderscore(oldName);
         }
     }
 }

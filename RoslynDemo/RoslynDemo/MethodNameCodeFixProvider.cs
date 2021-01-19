@@ -24,6 +24,5 @@ namespace CodeChecker
             SyntaxToken identifierToken = typeDecl.Identifier;
             return await GetNewSolution(document, typeDecl, cancellationToken, identifierToken.Text);
         }
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using CodeChecker.Defines;
+using CodeChecker.Delegates;
 
 namespace CodeChecker
 {
@@ -13,7 +14,7 @@ namespace CodeChecker
         protected override string Description => "型名に '_' を含んではいけません。";
 
         protected override bool validate(string typeName) {
-            return typeName.Contains("_");
+            return Predicates.ContainUnderscore(typeName);
         }
     }
 }

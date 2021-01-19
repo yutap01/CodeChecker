@@ -11,8 +11,8 @@
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="RoslynDemo.dll" />
-    <Asset Type="Microsoft.VisualStudio.Analyzer" Path="RoslynDemo.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="CodeChecker.dll" />
+    <Asset Type="Microsoft.VisualStudio.Analyzer" Path="CodeChecker.dll" />
   </Assets>
   <Prerequisites>
     <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />

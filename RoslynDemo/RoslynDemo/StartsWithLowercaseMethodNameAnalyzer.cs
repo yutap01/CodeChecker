@@ -2,6 +2,7 @@
 using Microsoft.CodeAnalysis.Diagnostics;
 using CodeChecker.Defines;
 using System;
+using CodeChecker.Delegates;
 
 namespace CodeChecker
 {
@@ -14,7 +15,7 @@ namespace CodeChecker
         protected override string Description => "メソッド名は大文字から開始する必要があります。";
 
         protected override bool validate(string name) {
-            return Char.IsLower(name[0]);
+            return Predicates.StartsWithLowercase(name);
         }
     }
 }
