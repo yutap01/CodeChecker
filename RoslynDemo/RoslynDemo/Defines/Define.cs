@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeChecker.Third;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,11 @@ namespace CodeChecker.Defines
         public static readonly string ID_STARTS_WITH_LOWERCASE_TYPE_NAME_ANALYZER = typeof(StartsWithLowercaseTypeNameAnalyzer).Name;
         public static readonly string ID_STARTS_WITH_LOWERCASE_METHOD_NAME_ANALYZER = typeof(StartsWithLowercaseMethodNameAnalyzer).Name;
         public static readonly string ID_STARTS_WITH_LOWERCASE_PROPERTY_NAME_ANALYZER = typeof(StartsWithLowercasePropertyNameAnalyzer).Name;
-
+        public static readonly string ID_SUMMARY_LESS_TYPE_COMMENT_ANALYZER = typeof(SummaryLessTypeCommentAnalyzer).Name;
+        public static readonly string ID_COMMENT_LESS_TYPE_COMMENT_ANALYZER = typeof(CommentLessTypeCommentAnalyzer).Name;
+        public static readonly string ID_INVALID_FORMAT_TYPE_COMMENT_ANALYZER = typeof(InvalidFormatTypeCommentAnalyzer).Name;
+        public static readonly string ID_MULTI_SUMMARY_TYPE_COMMENT_ANALYZER = typeof(MultiSummaryTypeCommentAnalyzer).Name;
+        public static readonly string ID_EMPTY_SUMMARY_TYPE_COMMENT_ANALYZER = typeof(EmptySummaryTypeCommentAnalyzer).Name;
+        public static readonly string ID_NOT_RESPECTFUL_SUMMARY_TYPE_COMMENT_ANALYZER = typeof(NotRespectfulSummaryTypeCommentAnalyzer).Name;
     }
 }

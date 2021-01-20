@@ -1,21 +1,20 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using CodeChecker.First;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace CodeChecker
+namespace CodeChecker.Second
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public abstract class MethodNameAnalyzer : NameAnalyzer
     {
         //アナライザーを初期化する
-        //TODO:sealed化
-        public override void Initialize(AnalysisContext context)
+        public sealed override void Initialize(AnalysisContext context)
         {
             context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.Method);
         }
 
         //メソッド名定義シンボルを診断する
-        //TODO:sealed化
-        protected override void AnalyzeSymbol(SymbolAnalysisContext context)
+        protected sealed override void AnalyzeSymbol(SymbolAnalysisContext context)
         {
             // SymbolKind.Methodで登録したので、対応するIMethodSymbolオブジェクトがcontextを通じて取得できる
             var methodSymbol = (IMethodSymbol)context.Symbol;

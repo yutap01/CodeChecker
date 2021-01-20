@@ -2,8 +2,9 @@
 using Microsoft.CodeAnalysis.Diagnostics;
 using CodeChecker.Defines;
 using CodeChecker.Delegates;
+using CodeChecker.Second;
 
-namespace CodeChecker
+namespace CodeChecker.Third
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class ContainUnderscoreTypeNameAnalyzer : TypeNameAnalyzer

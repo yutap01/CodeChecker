@@ -5,8 +5,9 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using CodeChecker.First;
 
-namespace CodeChecker
+namespace CodeChecker.Second
 {
     public abstract class MethodNameCodeFixProvider : NameCodeFixProvider
     {

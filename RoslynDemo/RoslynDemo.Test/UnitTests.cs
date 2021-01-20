@@ -4,7 +4,8 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TestHelper;
-using CodeChecker;
+using CodeChecker.First;
+using CodeChecker.Third;
 
 namespace CodeChecker.Test
 {

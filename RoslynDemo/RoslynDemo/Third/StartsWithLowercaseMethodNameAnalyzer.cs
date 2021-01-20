@@ -3,8 +3,9 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using CodeChecker.Defines;
 using System;
 using CodeChecker.Delegates;
+using CodeChecker.Second;
 
-namespace CodeChecker
+namespace CodeChecker.Third
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     class StartsWithLowercaseMethodNameAnalyzer : MethodNameAnalyzer

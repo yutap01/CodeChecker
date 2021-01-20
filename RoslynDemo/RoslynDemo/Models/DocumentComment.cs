@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace CodeChecker.Models
@@ -71,7 +72,7 @@ namespace CodeChecker.Models
             }
         }
 
-        static public DocumentComment Parse(string xmlComment, SymbolKind kind)
+        static public DocumentComment Parse(string xmlComment)
         {
             var obj = new DocumentComment();
 
@@ -93,7 +94,14 @@ namespace CodeChecker.Models
             }
 
             //XDocumentによる解析
-            var doc = XDocument.Parse(xmlComment);
+            XDocument doc;
+            try {
+                doc = XDocument.Parse(xmlComment);
+            }catch(XmlException) {
+                obj.errors.Add(Error.INVALID_FORMAT);
+                return obj;
+            }
+                
 
             //*** <summary>について ***
             var summaryTags = doc.Descendants(TAG_NAME_SUMMARY).ToList();

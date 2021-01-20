@@ -34,36 +34,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ContainUnderscoreMethodNameAnalyzer.cs" />
-    <Compile Include="ContainUnderscoreMethodNameCodeFixProvider.cs" />
-    <Compile Include="ContainUnderscorePropertyNameCodeFixProvider.cs" />
-    <Compile Include="ContainUnderscoreTypeNameCodeFIxProvider.cs" />
-    <Compile Include="ContainUnderscorePropertyNameAnalyzer.cs" />
+    <Compile Include="First\CommentAnalyzer.cs" />
+    <Compile Include="Second\TypeCommentAnalyzer.cs" />
+    <Compile Include="Third\CommentLessTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\ContainUnderscoreMethodNameAnalyzer.cs" />
+    <Compile Include="Third\ContainUnderscoreMethodNameCodeFixProvider.cs" />
+    <Compile Include="Third\ContainUnderscorePropertyNameCodeFixProvider.cs" />
+    <Compile Include="Third\ContainUnderscoreTypeNameCodeFIxProvider.cs" />
+    <Compile Include="Third\ContainUnderscorePropertyNameAnalyzer.cs" />
     <Compile Include="Delegates\Functions.cs" />
     <Compile Include="Delegates\Predicates.cs" />
-    <Compile Include="MethodNameAnalyzer.cs" />
-    <Compile Include="MethodNameCodeFixProvider.cs" />
+    <Compile Include="Second\MethodNameAnalyzer.cs" />
+    <Compile Include="Second\MethodNameCodeFixProvider.cs" />
     <Compile Include="Models\DocumentComment.cs" />
-    <Compile Include="NameAnalyzer.cs" />
-    <Compile Include="NameCodeFIxProvider.cs" />
-    <Compile Include="PropertyNameAnalyzer.cs" />
-    <Compile Include="PropertyNameCodeFixProvider.cs" />
-    <Compile Include="StartsWithLowercaseMethodNameAnalyzer.cs" />
-    <Compile Include="StartsWithLowercaseMethodNameCodeFixProvider.cs" />
-    <Compile Include="StartsWithLowercasePropertyNameAnalyzer.cs" />
-    <Compile Include="StartsWithLowercasePropertyNameCodeFixAnalyzer.cs" />
-    <Compile Include="StartsWithLowercaseTypeNameAnalyzer.cs" />
-    <Compile Include="StartsWithLowercaseTypeNameCodeFixProvider.cs" />
-    <Compile Include="TypeNameCodeFixProvider.cs" />
-    <Compile Include="ContainUnderscoreTypeNameAnalyzer.cs" />
+    <Compile Include="First\NameAnalyzer.cs" />
+    <Compile Include="First\NameCodeFIxProvider.cs" />
+    <Compile Include="Second\PropertyNameAnalyzer.cs" />
+    <Compile Include="Second\PropertyNameCodeFixProvider.cs" />
+    <Compile Include="Third\EmptySummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\InvalidFormatTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiSummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulSummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\StartsWithLowercaseMethodNameAnalyzer.cs" />
+    <Compile Include="Third\StartsWithLowercaseMethodNameCodeFixProvider.cs" />
+    <Compile Include="Third\StartsWithLowercasePropertyNameAnalyzer.cs" />
+    <Compile Include="Third\StartsWithLowercasePropertyNameCodeFixAnalyzer.cs" />
+    <Compile Include="Third\StartsWithLowercaseTypeNameAnalyzer.cs" />
+    <Compile Include="Third\StartsWithLowercaseTypeNameCodeFixProvider.cs" />
+    <Compile Include="Second\TypeNameCodeFixProvider.cs" />
+    <Compile Include="Third\ContainUnderscoreTypeNameAnalyzer.cs" />
     <Compile Include="Defines\Define.cs" />
-    <Compile Include="TypeNameAnalyzer.cs" />
+    <Compile Include="Second\TypeNameAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Third\SummaryLessTypeCommentAnalyzer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">

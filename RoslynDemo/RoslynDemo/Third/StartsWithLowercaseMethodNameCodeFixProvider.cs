@@ -3,8 +3,9 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using CodeChecker.Defines;
 using System.Composition;
 using CodeChecker.Delegates;
+using CodeChecker.Second;
 
-namespace CodeChecker
+namespace CodeChecker.Third
 {
     [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(StartsWithLowercaseMethodNameCodeFixProvider)), Shared]
     public class StartsWithLowercaseMethodNameCodeFixProvider : MethodNameCodeFixProvider

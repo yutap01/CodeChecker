@@ -6,8 +6,9 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Composition;
+using CodeChecker.First;
 
-namespace CodeChecker
+namespace CodeChecker.Second
 {
     //[ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(TypeNameCodeFixProvider)), Shared]
     public abstract class TypeNameCodeFixProvider : NameCodeFixProvider
