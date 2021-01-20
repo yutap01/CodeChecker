@@ -7,18 +7,23 @@ namespace CodeChecker
     public abstract class PropertyNameAnalyzer : NameAnalyzer
     {
         //アナライザーを初期化する
-        public override void Initialize(AnalysisContext context) {
+        //TODO:sealed化
+        public override void Initialize(AnalysisContext context)
+        {
             context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.Property);
         }
 
         //メソッド名定義シンボルを診断する
-        protected override void AnalyzeSymbol(SymbolAnalysisContext context) {
+        //TODO:sealed化
+        protected override void AnalyzeSymbol(SymbolAnalysisContext context)
+        {
             // SymbolKind.Propertyで登録したので、対応するIPropertySymbolオブジェクトがcontextを通じて取得できる
             var propertySymbol = (IPropertySymbol)context.Symbol;
             var propertyName = propertySymbol.Name;
 
             //悲しいことにインデクサの名前まで引っかかってしまう
-            if(propertyName == "this[]") {
+            if (propertyName == "this[]")
+            {
                 return;
             }
 
