@@ -28,7 +28,7 @@ namespace CodeChecker
             }
 
             //プロパティ名を診断する
-            DiagnoseName(context, propertyName, propertySymbol.Locations[0]);
+            DiagnoseName(propertyName, context, propertySymbol.Locations[0]);
         }
     }
 }

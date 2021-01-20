@@ -43,6 +43,7 @@
     <Compile Include="Delegates\Predicates.cs" />
     <Compile Include="MethodNameAnalyzer.cs" />
     <Compile Include="MethodNameCodeFixProvider.cs" />
+    <Compile Include="Models\DocumentComment.cs" />
     <Compile Include="NameAnalyzer.cs" />
     <Compile Include="NameCodeFIxProvider.cs" />
     <Compile Include="PropertyNameAnalyzer.cs" />

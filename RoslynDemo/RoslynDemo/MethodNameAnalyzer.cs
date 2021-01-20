@@ -29,7 +29,7 @@ namespace CodeChecker
             var methodName = methodSymbol.Name;
 
             //メソッド名を診断する
-            DiagnoseName(context, methodName, methodSymbol.Locations[0]);
+            DiagnoseName(methodName, context, methodSymbol.Locations[0]);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace CodeChecker
         //名前を定義するシンボルを診断にかける(第2階層にてシンボルとそのnameを特定する))
         protected abstract void AnalyzeSymbol(SymbolAnalysisContext context);
 
-        //名前を診断する(第2階層はシンボルを特定し、シンボルからnameを取得する。第2階層はnameを確定次第、このメソッドを呼び出す義務がある)
+        //名前を診断する(第2階層はシンボルを特定し、シンボルからnameを取得する。第2階層はAnalyzeSymbolメソッドにてnameを特定次第、このメソッドを呼び出す義務がある)
         protected void DiagnoseName(string name, SymbolAnalysisContext context, Location location)
         {
             //名前が違反している場合、診断書を発行する
