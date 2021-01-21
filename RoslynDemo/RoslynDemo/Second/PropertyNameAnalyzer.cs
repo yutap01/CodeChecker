@@ -4,7 +4,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 
 namespace CodeChecker.Second
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public abstract class PropertyNameAnalyzer : NameAnalyzer
     {
         //アナライザーを初期化する

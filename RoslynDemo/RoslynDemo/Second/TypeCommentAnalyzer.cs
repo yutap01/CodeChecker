@@ -5,7 +5,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 
 namespace CodeChecker.Second
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public abstract class TypeCommentAnalyzer : CommentAnalyzer
     {
         //アナライザーを初期化する

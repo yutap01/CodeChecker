@@ -10,7 +10,6 @@ using CodeChecker.First;
 
 namespace CodeChecker.Second
 {
-    //[ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(TypeNameCodeFixProvider)), Shared]
     public abstract class TypeNameCodeFixProvider : NameCodeFixProvider
     {
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context) {

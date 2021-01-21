@@ -4,7 +4,6 @@ using System.Collections.Immutable;
 
 namespace CodeChecker.First
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public abstract class NameAnalyzer : DiagnosticAnalyzer
     {
         //これらのプロパティの値は第3層で決定する

@@ -137,7 +137,7 @@ namespace CodeChecker.Models
         private static bool notRespectful(string message)
         {
             var isJapanese = Regex.IsMatch(message, @"[\p{IsHiragana}\p{IsKatakana}\p{IsCJKUnifiedIdeographs}]+");
-            return isJapanese && !message.Contains("ます。") && !message.Contains("です。");
+            return isJapanese && !message.Contains("ます") && !message.Contains("です");
         }
     }
 }
