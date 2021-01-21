@@ -17,7 +17,8 @@ namespace CodeChecker.First
 
         private readonly DiagnosticDescriptor Descripter = null;
 
-        public CommentAnalyzer() {
+        public CommentAnalyzer()
+        {
             //診断に対する設定
             Descripter = new DiagnosticDescriptor(
                 Id,
@@ -37,10 +38,12 @@ namespace CodeChecker.First
         protected abstract void AnalyzeSymbol(SymbolAnalysisContext context);
 
         //コメントを診断する(第2階層はシンボルを特定し、シンボルからnameを取得する。第2階層はAnalyzeSymbolメソッドにてnameを特定次第、このメソッドを呼び出す義務がある)
-        protected void DiagnoseComment(DocumentComment comment, SymbolAnalysisContext context, Location location) {
+        protected void DiagnoseComment(DocumentComment comment, SymbolAnalysisContext context, Location location)
+        {
             //名前が違反している場合、診断書を発行する
-            if (validate(comment)) {
-                var diagnostic = Diagnostic.Create(Descripter, location, comment);
+            if (validate(comment))
+            {
+                var diagnostic = Diagnostic.Create(Descripter, location, context.Symbol.Name);
                 context.ReportDiagnostic(diagnostic);
             }
         }

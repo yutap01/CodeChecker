@@ -3,3 +3,5 @@
 *.pdb
 *.cache
 *.vsix
+*.nupkg
+*.resources
