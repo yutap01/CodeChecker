@@ -51,9 +51,12 @@
     <Compile Include="First\NameCodeFIxProvider.cs" />
     <Compile Include="Second\PropertyNameAnalyzer.cs" />
     <Compile Include="Second\PropertyNameCodeFixProvider.cs" />
+    <Compile Include="Third\EmptyRemarksTypeCommentAnalyzer.cs" />
     <Compile Include="Third\EmptySummaryTypeCommentAnalyzer.cs" />
     <Compile Include="Third\InvalidFormatTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiRemarksTypeCommentAnalyzer.cs" />
     <Compile Include="Third\MultiSummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulRemarksTypeCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulSummaryTypeCommentAnalyzer.cs" />
     <Compile Include="Third\StartsWithLowercaseMethodNameAnalyzer.cs" />
     <Compile Include="Third\StartsWithLowercaseMethodNameCodeFixProvider.cs" />

@@ -21,5 +21,8 @@ namespace CodeChecker.Defines
         public static readonly string ID_MULTI_SUMMARY_TYPE_COMMENT_ANALYZER = typeof(MultiSummaryTypeCommentAnalyzer).Name;
         public static readonly string ID_EMPTY_SUMMARY_TYPE_COMMENT_ANALYZER = typeof(EmptySummaryTypeCommentAnalyzer).Name;
         public static readonly string ID_NOT_RESPECTFUL_SUMMARY_TYPE_COMMENT_ANALYZER = typeof(NotRespectfulSummaryTypeCommentAnalyzer).Name;
+        public static readonly string ID_MULTI_REMARKS_TYPE_COMMENT_ANALYZER = typeof(MultiRemarksTypeCommentAnalyzer).Name;
+        public static readonly string ID_EMPTY_REMARKS_TYPE_COMMENT_ANALYZER = typeof(EmptyRemarksTypeCommentAnalyzer).Name;
+        public static readonly string ID_NOT_RESPECTFUL_REMARKS_TYPE_COMMENT_ANALYZER = typeof(NotRespectfulRemarksTypeCommentAnalyzer).Name;
     }
 }

@@ -14,5 +14,8 @@ namespace CodeChecker.Delegates
         public static readonly Predicate<DocumentComment> MultiSummaryComment = (comment => comment.Errors.Contains(DocumentComment.Error.MULTI_SUMMARY));
         public static readonly Predicate<DocumentComment> EmptySummaryComment = (comment => comment.Errors.Contains(DocumentComment.Error.EMPTY_SUMMARY));
         public static readonly Predicate<DocumentComment> NotRespectfulSummaryComment = (comment => comment.Errors.Contains(DocumentComment.Error.NOT_RESPECTFUL_SUMMARY));
+        public static readonly Predicate<DocumentComment> MultiRemarksComment = (comment => comment.Errors.Contains(DocumentComment.Error.MULTI_REMARKS));
+        public static readonly Predicate<DocumentComment> EmptyRemarksComment = (comment => comment.Errors.Contains(DocumentComment.Error.EMPTY_REMARKS));
+        public static readonly Predicate<DocumentComment> NotRespectfulRemarksComment = (comment => comment.Errors.Contains(DocumentComment.Error.NOT_RESPECTFUL_REMARKS));
     }
 }

@@ -23,6 +23,9 @@ namespace CodeChecker.Models
         // <summary>タグを表す文字列
         private const string TAG_NAME_SUMMARY = "summary";
 
+        // <remarks>タグを表す文字列
+        private const string TAG_NAME_REMARKS = "remarks";
+
         // <returns>タグを表す文字列
         private const string TAG_NAME_RETURNS = "returns";
 
@@ -34,6 +37,9 @@ namespace CodeChecker.Models
 
         //<summary>の値
         public string Summary { get; set; }
+
+        //<remarks>の値
+        public string Remarks { get; set; }
 
         //key:<param>のname属性の値。value:<param>の値。
         private Dictionary<string, string> paramDictionary = null;
@@ -50,6 +56,9 @@ namespace CodeChecker.Models
             NOT_EXISTS_SUMMARY,         //<summary>が存在しない
             EMPTY_SUMMARY,              //<summary>の値が空
             NOT_RESPECTFUL_SUMMARY,     //<summary>の値が日本語かつ、敬体でない
+            MULTI_REMARKS,              //<remarks>が複数ある
+            EMPTY_REMARKS,              //<remarks>の値が空
+            NOT_RESPECTFUL_REMARKS,     //<remarks>の値が日本語かつ、敬体でない
             NOT_EXISTS_PARAM,           //必要な状況かつ、<param>が存在していない
             UNNECESSAY_PARAM,           //不要な状況かつ、<param>が1つ以上存在している
             EMPTY_PARAM,                //値が空の<param>が1つ以上存在している
@@ -102,30 +111,36 @@ namespace CodeChecker.Models
                 return obj;
             }
                 
-
             //*** <summary>について ***
             var summaryTags = doc.Descendants(TAG_NAME_SUMMARY).ToList();
-
-            if (summaryTags.Count == 0)
-            {
+            if (summaryTags.Count == 0){
                 obj.errors.Add(Error.NOT_EXISTS_SUMMARY);
-            }
-            else if (summaryTags.Count > 1)
-            {
+            } else if (summaryTags.Count > 1){
                 obj.errors.Add(Error.MULTI_SUMMARY);
             }
-            else
-            {
+            else {
                 obj.Summary = summaryTags[0].Value;
-                if (string.IsNullOrWhiteSpace(obj.Summary))
-                {
+                if (string.IsNullOrWhiteSpace(obj.Summary)) {
                     obj.errors.Add(Error.EMPTY_SUMMARY);
                 }
-                else if (notRespectful(obj.Summary))
-                {
+                else if (notRespectful(obj.Summary)) {
                     obj.errors.Add(Error.NOT_RESPECTFUL_SUMMARY);
                 }
             }
+
+            //*** <remarks>について ***
+            var remarksTags = doc.Descendants(TAG_NAME_REMARKS).ToList();
+            if (remarksTags.Count > 1) {
+                obj.errors.Add(Error.MULTI_REMARKS);
+            } else if(remarksTags.Count == 1){
+                obj.Remarks = remarksTags[0].Value;
+                if (string.IsNullOrWhiteSpace(obj.Remarks)) {
+                    obj.errors.Add(Error.EMPTY_REMARKS);
+                } else if (notRespectful(obj.Remarks)) {
+                    obj.errors.Add(Error.NOT_RESPECTFUL_REMARKS);
+                }
+            }
+
 
             //シンボルがメソッドの場合にのみ必要となる検証
             //TODO
@@ -137,7 +152,7 @@ namespace CodeChecker.Models
         private static bool notRespectful(string message)
         {
             var isJapanese = Regex.IsMatch(message, @"[\p{IsHiragana}\p{IsKatakana}\p{IsCJKUnifiedIdeographs}]+");
-            return isJapanese && !message.Contains("ます") && !message.Contains("です");
+            return isJapanese && !message.Contains("ます") && !message.Contains("ません") && !message.Contains("です");
         }
     }
 }
