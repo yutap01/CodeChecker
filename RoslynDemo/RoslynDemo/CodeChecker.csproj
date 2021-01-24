@@ -34,8 +34,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseAnalyzer.cs" />
     <Compile Include="First\CommentAnalyzer.cs" />
+    <Compile Include="Manager\IgnoreItem.cs" />
+    <Compile Include="Manager\IgnoreItemList.cs" />
+    <Compile Include="Manager\NamespaceIgnoreManager.cs" />
+    <Compile Include="Second\EnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Second\FieldCommentAnalyzer.cs" />
+    <Compile Include="Second\PropertyCommentAnalyzer.cs" />
+    <Compile Include="Second\MethodCommentAnalyzer.cs" />
     <Compile Include="Second\TypeCommentAnalyzer.cs" />
+    <Compile Include="Third\CommentLessEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\CommentLessFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\EachParamLessMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\DuplicateParamMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptyReturnsMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiReturnsMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulEachParameterMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptyEachParameterMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulRetunsMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\ParamLessMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\CommentLessPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\CommentLessMethodCommentAnalyzer.cs" />
     <Compile Include="Third\CommentLessTypeCommentAnalyzer.cs" />
     <Compile Include="Third\ContainUnderscoreMethodNameAnalyzer.cs" />
     <Compile Include="Third\ContainUnderscoreMethodNameCodeFixProvider.cs" />
@@ -51,13 +71,43 @@
     <Compile Include="First\NameCodeFIxProvider.cs" />
     <Compile Include="Second\PropertyNameAnalyzer.cs" />
     <Compile Include="Second\PropertyNameCodeFixProvider.cs" />
+    <Compile Include="Third\EmptyRemarksEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptyRemarksFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptyRemarksPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptyRemarksMethodCommentAnalyzer.cs" />
     <Compile Include="Third\EmptyRemarksTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptySummaryEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptySummaryFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptySummaryPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\EmptySummaryMethodCommentAnalyzer.cs" />
     <Compile Include="Third\EmptySummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\InvalidFormatEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\InvalidFormatFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\InvalidFormatPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\InvalidFormatMethodCommentAnalyzer.cs" />
     <Compile Include="Third\InvalidFormatTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiRemarksEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiRemarksFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiRemarksPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiRemarksMethodCommentAnalyzer.cs" />
     <Compile Include="Third\MultiRemarksTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiSummaryEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiSummaryFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiSummaryPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\MultiSummaryMethodCommentAnalyzer.cs" />
     <Compile Include="Third\MultiSummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulRemarksEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulRemarksFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulRemarksPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulRemarksMethodCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulRemarksTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulSummaryEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulSummaryFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulSummaryPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\NotRespectfulSummaryMethodCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulSummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\UnnecessaryParamMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\UnnecessaryReturnsMethodCommentAnalyzer.cs" />
     <Compile Include="Third\StartsWithLowercaseMethodNameAnalyzer.cs" />
     <Compile Include="Third\StartsWithLowercaseMethodNameCodeFixProvider.cs" />
     <Compile Include="Third\StartsWithLowercasePropertyNameAnalyzer.cs" />
@@ -74,6 +124,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Third\SummaryLessEnumMemberCommentAnalyzer.cs" />
+    <Compile Include="Third\SummaryLessFieldCommentAnalyzer.cs" />
+    <Compile Include="Third\ReturnLessMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\SummaryLessPropertyCommentAnalyzer.cs" />
+    <Compile Include="Third\SummaryLessMethodCommentAnalyzer.cs" />
     <Compile Include="Third\SummaryLessTypeCommentAnalyzer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +142,7 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <AdditionalFiles Include="ignorelist.json" />
     <None Include="packages.config" />
     <None Include="tools\install.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -117,6 +173,10 @@
       <HintPath>..\..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.1\lib\portable-net45+win8\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Collections.Immutable.1.1.37\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
       <Private>True</Private>
@@ -145,6 +205,9 @@
       <HintPath>..\..\packages\System.Reflection.Metadata.1.2.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="AfterBuild">
