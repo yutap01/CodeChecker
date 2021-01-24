@@ -53,6 +53,7 @@
     <Compile Include="Third\NotRespectfulEachParameterMethodCommentAnalyzer.cs" />
     <Compile Include="Third\EmptyEachParameterMethodCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulRetunsMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\NameLessParamMethodCommentAnalyzer.cs" />
     <Compile Include="Third\ParamLessMethodCommentAnalyzer.cs" />
     <Compile Include="Third\CommentLessPropertyCommentAnalyzer.cs" />
     <Compile Include="Third\CommentLessMethodCommentAnalyzer.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Third\NotRespectfulSummaryPropertyCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulSummaryMethodCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulSummaryTypeCommentAnalyzer.cs" />
+    <Compile Include="Third\UnnecessaryParamNameMethodCommentAnalyzer.cs" />
     <Compile Include="Third\UnnecessaryParamMethodCommentAnalyzer.cs" />
     <Compile Include="Third\UnnecessaryReturnsMethodCommentAnalyzer.cs" />
     <Compile Include="Third\StartsWithLowercaseMethodNameAnalyzer.cs" />

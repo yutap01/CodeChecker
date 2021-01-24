@@ -28,5 +28,7 @@ namespace CodeChecker.Delegates
         public static readonly Predicate<DocumentComment> MultiReturnsComment = (comment => comment.Errors.Contains(DocumentComment.Error.MULTI_RETURNS));
         public static readonly Predicate<DocumentComment> UnnecessaryReturnsComment = (comment => comment.Errors.Contains(DocumentComment.Error.UNNECESSARY_RETURNS));
         public static readonly Predicate<DocumentComment> UnnecessaryParamComment = (comment => comment.Errors.Contains(DocumentComment.Error.UNNECESSARY_PARAM));
+        public static readonly Predicate<DocumentComment> UnnecessaryParamNameComment = (comment => comment.hasParamError(DocumentComment.Error.UNNECESSARY_PARAM_NAME));
+        public static readonly Predicate<DocumentComment> NameLessParamComment = (comment => comment.Errors.Contains(DocumentComment.Error.NO_NAME_PARAM));
     }
 }

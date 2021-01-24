@@ -64,6 +64,7 @@ namespace CodeChecker.Models
             NOT_EXISTS_PARAM,           //必要な状況かつ、<param>が全く存在していない
             NOT_EXISTS_EACH_PARAM,      //必要な状況かつ、ある引数に対応する<param>が存在していない
             UNNECESSARY_PARAM_NAME,     //不必要なnameの<param>が存在している
+            NO_NAME_PARAM,              //name属性を持たない<param>が存在している
             UNNECESSARY_PARAM,          //メソッドに引数がないのに<param>が存在している    
             EMPTY_PARAM,                //値が空の<param>が1つ以上存在している
             DUPULICATE_PARAM,           //同一のnameを持つ<param>が複数存在している
@@ -220,11 +221,21 @@ namespace CodeChecker.Models
         /// <param name="doc">XMLコメントです</param>
         /// <param name="decParamNames">メソッド定義における引数名の一覧です</param>
         private static void parseParameterOfMethod(DocumentComment comment, XDocument doc, IReadOnlyList<string>decParamNames) {
+            
+            
             //メソッド定義に引数がある場合
             List<XElement> paramTags = doc.Descendants(TAG_NAME_PARAM).ToList();
+
+            //nameのないparam
+            var noNameTags = paramTags.Where(tag => tag.Attribute(ATTRIBUTE_NAME_NAME) == null).ToList();
+            if(noNameTags.Count > 0) {
+                comment.errors.Add(Error.NO_NAME_PARAM);
+                return;
+            }
+
             if (decParamNames.Count > 0) {
                 //<param>タグの一覧
-                var commentParamNames = paramTags.Where(tag => tag.Attribute(ATTRIBUTE_NAME_NAME) != null).Select(tag => tag.Attribute(ATTRIBUTE_NAME_NAME).Value).ToList();
+                var commentParamNames = paramTags.Select(tag => tag.Attribute(ATTRIBUTE_NAME_NAME).Value).ToList();
 
                 //<param>タグが全く存在しない
                 if (paramTags.Count == 0) {
@@ -235,9 +246,7 @@ namespace CodeChecker.Models
                 //<param>タグのname値をkeyとし、とタグの値をvalueとする辞書を生成する(TODO:検証 キーが重複している場合どうなる？？)
                 Dictionary<string, string> nameParamValueDictionary;
                 try {
-                    nameParamValueDictionary = paramTags.
-                        Where(tag => tag.Attribute(ATTRIBUTE_NAME_NAME) != null).
-                        ToDictionary(tag => tag.Attribute(ATTRIBUTE_NAME_NAME).Value, tag => tag.Value);
+                    nameParamValueDictionary = paramTags.ToDictionary(tag => tag.Attribute(ATTRIBUTE_NAME_NAME).Value, tag => tag.Value);
                 } catch (ArgumentException) {
                     comment.errors.Add(Error.DUPULICATE_PARAM);
                     return;
@@ -291,7 +300,7 @@ namespace CodeChecker.Models
                 }
             }
 
-            //不要なparamタグが存在している
+            //不要なparamタグが存在している(nameが空やWhiteSpaceの場合も含む)
             foreach (var commentParamName in commentParamNames) {
                 if (!decParamNames.Contains(commentParamName)) {
                     res.Add(commentParamName, Error.UNNECESSARY_PARAM_NAME);
