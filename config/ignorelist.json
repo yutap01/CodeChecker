@@ -1,0 +1,565 @@
+﻿{
+  "ignorelist": [
+    {
+      "analyzer": "CommentLessFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "CommentLessMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "CommentLessPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "CommentLessTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ContainUnderscoreMethodNameAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ContainUnderscoreMethodNameCodeFixProvider",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ContainUnderscorePropertyNameAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ContainUnderscorePropertyNameCodeFixProvider",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ContainUnderscoreTypeNameAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ContainUnderscoreTypeNameCodeFIxProvider",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "DuplicateParamMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EachParamLessMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyEachParameterMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyRemarksEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyRemarksFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyRemarksMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyRemarksPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyRemarksTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptyReturnsMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptySummaryEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptySummaryFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptySummaryMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptySummaryPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "EmptySummaryTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "InvalidFormatEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "InvalidFormatFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "InvalidFormatMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "InvalidFormatPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "InvalidFormatTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiRemarksEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiRemarksFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiRemarksMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiRemarksPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiRemarksTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiReturnsMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiSummaryEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiSummaryFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiSummaryMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiSummaryPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "MultiSUmmaryTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NameLessParamMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulEachParameterMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulRetunsMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ParamLessMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "ReturnLessMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "StartsWithLowercaseMethodNameAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "StartsWithLowercaseMethodNameCodeFixProvider",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "StartsWithLowercasePropertyNameAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "StartsWithLowercasePropertyNameCodeFixAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "StartsWithLowercaseTypeNameAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "StartsWithLowercaseTypeNameCodeFixProvider",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "SummaryLessEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "SummaryLessFieldCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "SummaryLessMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "SummaryLessPropertyCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "SummaryLessTypeCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "UnnecessaryParamMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "UnnecessaryParamNameMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "UnnecessaryReturnsMethodCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "CommentLessEnumMemberCommentAnalyzer",
+      "namespace": "Eizo.RadiNETPro.EntityFrameworks.SQLServer"
+    },
+    {
+      "analyzer": "CommentLessFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "CommentLessMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "CommentLessPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "CommentLessTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ContainUnderscoreMethodNameAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ContainUnderscoreMethodNameCodeFixProvider",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ContainUnderscorePropertyNameAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ContainUnderscorePropertyNameCodeFixProvider",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ContainUnderscoreTypeNameAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ContainUnderscoreTypeNameCodeFIxProvider",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "DuplicateParamMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EachParamLessMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyEachParameterMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyRemarksEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyRemarksFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyRemarksMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyRemarksPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyRemarksTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptyReturnsMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptySummaryEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptySummaryFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptySummaryMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptySummaryPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "EmptySummaryTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "InvalidFormatEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "InvalidFormatFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "InvalidFormatMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "InvalidFormatPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "InvalidFormatTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiRemarksEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiRemarksFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiRemarksMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiRemarksPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiRemarksTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiReturnsMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiSummaryEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiSummaryFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiSummaryMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiSummaryPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "MultiSUmmaryTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NameLessParamMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulEachParameterMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulRemarksTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulRetunsMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "NotRespectfulSummaryTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ParamLessMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "ReturnLessMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "StartsWithLowercaseMethodNameAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "StartsWithLowercaseMethodNameCodeFixProvider",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "StartsWithLowercasePropertyNameAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "StartsWithLowercasePropertyNameCodeFixAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "StartsWithLowercaseTypeNameAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "StartsWithLowercaseTypeNameCodeFixProvider",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "SummaryLessEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "SummaryLessFieldCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "SummaryLessMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "SummaryLessPropertyCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "SummaryLessTypeCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "UnnecessaryParamMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "UnnecessaryParamNameMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "UnnecessaryReturnsMethodCommentAnalyzer",
+      "namespace": "Resources"
+    },
+    {
+      "analyzer": "CommentLessEnumMemberCommentAnalyzer",
+      "namespace": "Resources"
+    }
+
+  ]
+}
