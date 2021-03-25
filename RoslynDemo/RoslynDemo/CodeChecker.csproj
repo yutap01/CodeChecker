@@ -34,13 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Base\BaseAnalyzer.cs" />
+    <Compile Include="Base\OperationAnalyzer.cs" />
+    <Compile Include="Base\SymbolAnalyzer.cs" />
     <Compile Include="First\CommentAnalyzer.cs" />
+    <Compile Include="First\FunctionCallAnalyzer.cs" />
     <Compile Include="Manager\IgnoreItem.cs" />
     <Compile Include="Manager\IgnoreItemList.cs" />
     <Compile Include="Manager\NamespaceIgnoreManager.cs" />
     <Compile Include="Second\EnumMemberCommentAnalyzer.cs" />
     <Compile Include="Second\FieldCommentAnalyzer.cs" />
+    <Compile Include="Second\LogFunctionCallAnalyzer.cs" />
     <Compile Include="Second\PropertyCommentAnalyzer.cs" />
     <Compile Include="Second\MethodCommentAnalyzer.cs" />
     <Compile Include="Second\TypeCommentAnalyzer.cs" />

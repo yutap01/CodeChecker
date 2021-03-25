@@ -5,9 +5,9 @@ using System.Collections.Immutable;
 
 namespace CodeChecker.First
 {
-    public abstract class NameAnalyzer : BaseAnalyzer
+    public abstract class NameAnalyzer : SymbolAnalyzer
     {
-        public NameAnalyzer():base("Naming", DiagnosticSeverity.Error)
+        public NameAnalyzer() : base("Naming", DiagnosticSeverity.Error)
         {
         }
 
@@ -16,12 +16,14 @@ namespace CodeChecker.First
         {
             //シンボルが無視対象の場合、診断しない
             var strNamespace = context.Symbol.ContainingNamespace.ToString();
-            if (IsIgnored(context, this.GetType().Name, strNamespace)) {
+            if (IsIgnored(context, this.GetType().Name, strNamespace))
+            {
                 return;
             }
 
             //nameが未入力の場合は無視する
-            if (string.IsNullOrEmpty(name)) {
+            if (string.IsNullOrEmpty(name))
+            {
                 return;
             }
 

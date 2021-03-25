@@ -72,7 +72,7 @@ namespace CodeChecker.Models
             EMPTY_RETURNS,              //<returns>の値が空
             NOT_RESPECTFUL_RETURNS,     //<returns>の値が日本語かつ、敬体でない
             NOT_EXISTS_RETURNS,         //必要な状況かつ、<returns>が存在しない
-            UNNECESSARY_RETURNS,         //不要な状況かつ、<returns>が存在する
+            UNNECESSARY_RETURNS,        //不要な状況かつ、<returns>が存在する
         }
 
         //解析時に検出されたエラー群
