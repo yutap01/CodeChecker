@@ -21,7 +21,7 @@ namespace CodeChecker.First
                 return;
             }
 
-            //名前が違反している場合、診断書を発行する
+            //コメントが違反している場合、診断書を発行する
             if (validate(comment))
             {
                 var diagnostic = Diagnostic.Create(Descripter, location, context.Symbol.Name);
