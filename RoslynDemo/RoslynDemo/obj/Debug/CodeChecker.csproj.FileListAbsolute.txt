@@ -30,3 +30,5 @@ D:\projects\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.Resources.re
 D:\projects\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.csproj.GenerateResource.Cache
 D:\projects\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.dll
 D:\projects\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.pdb
+D:\projects\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Newtonsoft.Json.dll
+D:\projects\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Newtonsoft.Json.xml

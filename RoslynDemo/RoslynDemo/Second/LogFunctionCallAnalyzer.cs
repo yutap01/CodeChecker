@@ -1,7 +1,10 @@
 ﻿using CodeChecker.First;
 using CodeChecker.Models;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
+using System.Diagnostics;
 
 namespace CodeChecker.Second
 {
@@ -10,25 +13,27 @@ namespace CodeChecker.Second
         //アナライザーを初期化する
         public sealed override void Initialize(AnalysisContext context)
         {
-            //context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.Field);
-            context.RegisterOperationAction(AnalyzeOperation, OperationKind.Argument);
+            context.RegisterSyntaxNodeAction(AnalyzeOperation, SyntaxKind.InvocationExpression);
         }
 
         //フィールド定義シンボルを診断する
-        protected sealed override void AnalyzeOperation(OperationAnalysisContext context)
+        protected sealed override void AnalyzeOperation(SyntaxNodeAnalysisContext context)
         {
-            var fieldSymbol = (IOperation)context.Operation;
+            var node = context.Node as InvocationExpressionSyntax;
+            if(node == null) {
+                Debug.WriteLine("LogFunctionCallAnalyzer.AnalyzeOperation:診断に失敗");
+                return;
+            }
 
-            ////enumの列挙定数もフィールドとして扱われてしまう。列挙定数は対象外とする
-            //if (fieldSymbol.ContainingType.TypeKind == TypeKind.Enum)
-            //{
-            //    return;
-            //}
+            var expression = node.Expression as MemberAccessExpressionSyntax;
+            
+            if(expression != null) {
+                var identifier = expression.Name.Identifier;
+                var ArgumentList = node.ArgumentList.Arguments;
 
-            //var comment = DocumentComment.Parse(fieldSymbol.GetDocumentationCommentXml());
-
-            ////フィールドコメントを診断する
-            //DiagnoseComment(comment, context, fieldSymbol.Locations[0]);
+                var location = node.ArgumentList.Arguments[1].GetLocation();
+                DiagnoseFunctionCall(new FunctionCall(context), context, location);
+            }
         }
     }
 }

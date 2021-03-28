@@ -48,7 +48,7 @@ namespace CodeChecker.Models
         //<returns>の値
         public string Returns { get; set; }
 
-        //解析時に検出されるエラー種(同時に複数起こる)
+        //パース時に検出されるエラー種(同時に複数起こる)
         public enum Error
         {
             NOT_EXISTS,                 //ドキュメンテーションコメントが存在しない

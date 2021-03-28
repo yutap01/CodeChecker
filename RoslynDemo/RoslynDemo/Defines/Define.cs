@@ -77,5 +77,6 @@ namespace CodeChecker.Defines
         public static readonly string ID_UNNECESSARY_PARAM_METHOD_COMMENT_ANALYZER = typeof(UnnecessaryParamMethodCommentAnalyzer).Name;
         public static readonly string ID_UNNECESSARY_PARAM_NAME_METHOD_COMMENT_ANALYZER = typeof(UnnecessaryParamNameMethodCommentAnalyzer).Name;
         public static readonly string ID_NAME_LESS_PARAM_METHOD_COMMENT_ANALYZER = typeof(NameLessParamMethodCommentAnalyzer).Name;
+        public static readonly string ID_ILLEGAL_SECOND_ARGUMENT_LOG_FUNCTION_CALL_ANALYZER = typeof(IllegalSecondArgumentLogFunctionCallAnalyzer).Name;
     }
 }

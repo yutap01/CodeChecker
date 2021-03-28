@@ -41,6 +41,7 @@
     <Compile Include="Manager\IgnoreItem.cs" />
     <Compile Include="Manager\IgnoreItemList.cs" />
     <Compile Include="Manager\NamespaceIgnoreManager.cs" />
+    <Compile Include="Models\FunctionCall.cs" />
     <Compile Include="Second\EnumMemberCommentAnalyzer.cs" />
     <Compile Include="Second\FieldCommentAnalyzer.cs" />
     <Compile Include="Second\LogFunctionCallAnalyzer.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Third\EachParamLessMethodCommentAnalyzer.cs" />
     <Compile Include="Third\DuplicateParamMethodCommentAnalyzer.cs" />
     <Compile Include="Third\EmptyReturnsMethodCommentAnalyzer.cs" />
+    <Compile Include="Third\IllegalSecondArgumentLogFunctionCallAnalyzer.cs" />
     <Compile Include="Third\MultiReturnsMethodCommentAnalyzer.cs" />
     <Compile Include="Third\NotRespectfulEachParameterMethodCommentAnalyzer.cs" />
     <Compile Include="Third\EmptyEachParameterMethodCommentAnalyzer.cs" />

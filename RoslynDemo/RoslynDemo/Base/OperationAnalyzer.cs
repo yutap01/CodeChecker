@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using CodeChecker.Manager;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Immutable;
@@ -26,22 +27,20 @@ namespace CodeChecker.Base
                 category,
                 severity,
                 true,
-                helpLinkUri: "http://tech.tanaka733.net",
+                helpLinkUri: "",
                 description: Description);
         }
 
         //対象とする診断の定義
         public sealed override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Descripter);
 
-        //コメントを定義するシンボルを診断にかける(第2階層にてシンボルとそのnameを特定する))
-        protected abstract void AnalyzeOperation(OperationAnalysisContext context);
+        //Operationを診断にかける
+        protected abstract void AnalyzeOperation(SyntaxNodeAnalysisContext context);
 
         //診断対象の要素が無視対象であるかを調べる
-        protected bool IsIgnored(OperationAnalysisContext context, string analyzer, string strNamespace)
+        protected bool IsIgnored(SyntaxNodeAnalysisContext context, string analyzer, string strNamespace)
         {
-            throw new Exception("未実装");
-            return false;
-            //return NamespaceIgnoreManager.GetInstance(context).IsIgnored(analyzer, strNamespace);
+            return NamespaceIgnoreManager.GetInstance(context).IsIgnored(analyzer, strNamespace);
         }
     }
 }

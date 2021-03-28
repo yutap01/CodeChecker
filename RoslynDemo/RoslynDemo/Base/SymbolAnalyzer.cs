@@ -26,7 +26,7 @@ namespace CodeChecker.Base
                 category,
                 severity,
                 true,
-                helpLinkUri: "http://tech.tanaka733.net",
+                helpLinkUri: "",
                 description: Description);
         }
 
