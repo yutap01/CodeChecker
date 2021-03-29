@@ -1,11 +1,8 @@
 ﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeChecker.Models
 {
@@ -19,10 +16,13 @@ namespace CodeChecker.Models
         /// <summary>
         /// 呼び出されているメソッドの名前
         /// </summary>
-        public string MethodName {
-            get {
+        public string MethodName
+        {
+            get
+            {
                 var node = Context.Node as InvocationExpressionSyntax;
-                if (node == null) {
+                if (node == null)
+                {
                     return null;
                 }
                 var expression = node.Expression as MemberAccessExpressionSyntax;
@@ -31,12 +31,15 @@ namespace CodeChecker.Models
         }
 
         /// <summary>
-        /// 呼び出されているメソッドの名前(namespaceおよびクラス名付き)
+        /// 呼び出されているメソッドの名前(クラス名.メソッド名)
         /// </summary>
-        public string MethodNameFull {
-            get {
+        public string MethodNameFromClass
+        {
+            get
+            {
                 var node = Context.Node as InvocationExpressionSyntax;
-                if(node == null) {
+                if (node == null)
+                {
                     return null;
                 }
                 var expression = node.Expression as MemberAccessExpressionSyntax;
@@ -47,8 +50,10 @@ namespace CodeChecker.Models
         /// <summary>
         /// 呼び出し側のメソッドの名前
         /// </summary>
-        public string ContainMethodName {
-            get {
+        public string ContainMethodName
+        {
+            get
+            {
                 return Context.ContainingSymbol.Name;
             }
         }
@@ -56,8 +61,10 @@ namespace CodeChecker.Models
         /// <summary>
         /// 呼び出し側のメソッドのnamespace
         /// </summary>
-        public string ContainNamespace {
-            get {
+        public string ContainNamespace
+        {
+            get
+            {
                 //TODO:削除
                 Debug.WriteLine("Namespace:" + Context.ContainingSymbol.ContainingNamespace.Name);
                 return Context.ContainingSymbol.ContainingNamespace.Name;
@@ -67,10 +74,13 @@ namespace CodeChecker.Models
         /// <summary>
         /// 引数のリストを返す
         /// </summary>
-        public IList<ArgumentSyntax> Arguments {
-            get {
+        public IList<ArgumentSyntax> Arguments
+        {
+            get
+            {
                 var node = Context.Node as InvocationExpressionSyntax;
-                if (node == null) {
+                if (node == null)
+                {
                     return null;
                 }
                 return node.ArgumentList.Arguments.ToList();
@@ -81,9 +91,9 @@ namespace CodeChecker.Models
         /// コンストラクタ
         /// </summary>
         /// <param name="context"></param>
-        public FunctionCall(SyntaxNodeAnalysisContext context) {
+        public FunctionCall(SyntaxNodeAnalysisContext context)
+        {
             Context = context;
         }
-
     }
 }

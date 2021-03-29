@@ -1,6 +1,5 @@
 ﻿using CodeChecker.First;
 using CodeChecker.Models;
-using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
@@ -20,19 +19,23 @@ namespace CodeChecker.Second
         protected sealed override void AnalyzeOperation(SyntaxNodeAnalysisContext context)
         {
             var node = context.Node as InvocationExpressionSyntax;
-            if(node == null) {
+            if (node == null)
+            {
                 Debug.WriteLine("LogFunctionCallAnalyzer.AnalyzeOperation:診断に失敗");
                 return;
             }
 
             var expression = node.Expression as MemberAccessExpressionSyntax;
-            
-            if(expression != null) {
+
+            if (expression != null)
+            {
                 var identifier = expression.Name.Identifier;
                 var ArgumentList = node.ArgumentList.Arguments;
-
-                var location = node.ArgumentList.Arguments[1].GetLocation();
-                DiagnoseFunctionCall(new FunctionCall(context), context, location);
+                if (node.ArgumentList.Arguments.Count > 1)
+                {
+                    var location = node.ArgumentList.Arguments[1].GetLocation();
+                    DiagnoseFunctionCall(new FunctionCall(context), context, location);
+                }
             }
         }
     }

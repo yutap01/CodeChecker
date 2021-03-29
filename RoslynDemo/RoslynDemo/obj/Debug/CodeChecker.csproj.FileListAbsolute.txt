@@ -35,8 +35,8 @@ D:\projects\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Diagnostic.nuspec
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\tools\install.ps1
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\tools\uninstall.ps1
-C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\RadiNetProCodeChecker.dll
-C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\RadiNetProCodeChecker.pdb
+C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\RadiNETProCodeChecker.dll
+C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\RadiNETProCodeChecker.pdb
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Microsoft.CodeAnalysis.dll
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Newtonsoft.Json.dll
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\System.Collections.Immutable.dll
@@ -47,5 +47,6 @@ C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\System.Reflection.Metadata.xml
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.Resources.resources
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.csproj.GenerateResource.Cache
-C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\RadiNetProCodeChecker.dll
-C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\RadiNetProCodeChecker.pdb
+C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\RadiNETProCodeChecker.dll
+C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\RadiNETProCodeChecker.pdb
+C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.csprojResolveAssemblyReference.cache
