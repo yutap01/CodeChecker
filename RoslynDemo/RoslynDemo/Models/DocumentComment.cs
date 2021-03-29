@@ -226,11 +226,16 @@ namespace CodeChecker.Models
                 false;
         }
 
-        //指定のメッセージが日本語かつ敬体でない場合trueとなる
+        //指定のメッセージが日本語を含み、かつ敬体でない場合trueとなる
         private static bool notRespectful(string message)
         {
             var isJapanese = Regex.IsMatch(message, @"[\p{IsHiragana}\p{IsKatakana}\p{IsCJKUnifiedIdeographs}]+");
-            return isJapanese && !message.Contains("ます") && !message.Contains("ません") && !message.Contains("です") && !message.Contains("ました");
+            return isJapanese &&
+                !message.Contains("ます") &&
+                !message.Contains("ません") &&
+                !message.Contains("です") &&
+                !message.Contains("ました") &&
+                !message.Contains("ください");
         }
 
         /// <summary>

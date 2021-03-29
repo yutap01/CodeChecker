@@ -45,8 +45,8 @@ C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\System.Collections.Immutable.xml
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.csprojResolveAssemblyReference.cache
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.Resources.resources
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.csproj.GenerateResource.Cache
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\RadiNETProCodeChecker.dll
 C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\RadiNETProCodeChecker.pdb
-C:\Users\209040\Documents\work\tools\CodeChecker\RoslynDemo\RoslynDemo\obj\Debug\CodeChecker.csprojResolveAssemblyReference.cache

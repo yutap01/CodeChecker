@@ -1,20 +1,24 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeChecker.Manager
 {
     [JsonObject]
-    class IgnoreItemList
+    internal class IgnoreItemList
     {
         [JsonProperty("ignorelist")]
         private List<IgnoreItem> IgnoreList { get; set; }
 
-        public bool Exists(string analyzer,string strNamespace) {
-            return IgnoreList.Exists(item => item.Analyzer == analyzer && item.Namespace == strNamespace);
+        /// <summary>
+        /// 指定のanalyzer,namespaceの組が無視リストに含まれているか否かを通知する
+        /// 無視定義ファイル上でanalyzerが指定されていない場合(""の場合)、全てのanalyzerが無視リストに登録されているものとして扱う
+        /// </summary>
+        /// <param name="analyzer"></param>
+        /// <param name="strNamespace"></param>
+        /// <returns></returns>
+        public bool Exists(string analyzer, string strNamespace)
+        {
+            return IgnoreList.Exists(item => (item.Analyzer == analyzer || item.Analyzer == "") && item.Namespace == strNamespace);
         }
     }
 }
