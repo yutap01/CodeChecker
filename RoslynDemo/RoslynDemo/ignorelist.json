@@ -5,24 +5,8 @@
       "namespace": "CommentAnalyzerTest.Ignore"
     },
     {
-      "analyzer": "ContainUnderscoreMethodNameCodeFixProvider",
-      "namespace": "CommentAnalyzerTest.Ignore"
-    },
-    {
-      "analyzer": "ContainUnderscorePropertyNameAnalyzer",
-      "namespace": "CommentAnalyzerTest.Ignore"
-    },
-    {
-      "analyzer": "ContainUnderscorePropertyNameCodeFixProvider",
-      "namespace": "CommentAnalyzerTest.Ignore"
-    },
-    {
-      "analyzer": "ContainUnderscoreTypeNameAnalyzer",
-      "namespace": "CommentAnalyzerTest.Ignore"
-    },
-    {
-      "analyzer": "ContainUnderscoreTypeNameCodeFIxProvider",
-      "namespace": "CommentAnalyzerTest.Ignore"
+      "analyzer": "",
+      "namespace": "Resources"
     }
   ]
 }

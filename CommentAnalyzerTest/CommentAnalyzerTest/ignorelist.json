@@ -1,0 +1,17 @@
+﻿{
+  "ignorelist": [
+    {
+      "analyzer": "CommentLessTypeCommentAnalyzer",
+      "namespace": "CommentAnalyzerTest.Ignore"
+    },
+    {
+      "analyzer": "MultiSummaryTypeCommentAnalyzer",
+      "namespace": "CommentAnalyzerTest.Ignore"
+    },
+    {
+      "analyzer": "MultiRemarksTypeCommentAnalyzer",
+      "namespace": "CommentAnalyzerTest.Ignore"
+    }
+
+  ]
+}

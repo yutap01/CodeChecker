@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommentAnalyzerTest</name>
+    </assembly>
+    <members>
+        <member name="T:CommentAnalyzerTest.Ignore.IgnoreTest2">
+            <summary>
+            マルチサマリの無視です。
+            </summary>
+            <summary>
+            マルチサマリの無視です。
+            </summary>
+        </member>
+        <member name="T:CommentAnalyzerTest.Ignore.IgnoreTest3">
+            <summary>
+            マルチremarksの無視です。
+            </summary>
+            <remarks>
+            remarks1です。
+            </remarks>
+            <remarks>
+            remarks2です。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.MethodTest">
+            <summary>
+            メソッドコメントに対する評価を行うためのクラスです。
+            </summary>
+        </member>
+        <member name="M:CommentAnalyzerTest.MethodTest.DumyMethod(System.Int32,System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            メソッドのテストです。
+            </summary>
+            <param name="">あああます</param>
+            <param name="b"></param>
+            <param name="c">ううう</param>
+            <returns>   aaa </returns>
+        </member>
+        <member name="M:CommentAnalyzerTest.MethodTest.#ctor">
+            <summary>
+            aaaです
+            </summary>
+            <param></param>
+            <returns>戻り値ないよ</returns>
+        </member>
+        <member name="M:CommentAnalyzerTest.MethodTest.DummyMethod2(System.Int32)">
+            <summary>
+            サマリです。
+            </summary>
+            <param name="a">です</param>
+            <param>nameのないparam</param>
+            <param name="">nameが空のparam</param>
+            <param name="b">不要なparam</param>
+            <returns>戻り値です</returns>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "T:CommentAnalyzerTest.Dummy1" で無視されました -->
+        <member name="T:CommentAnalyzerTest.Dummy2">
+            <dummysummary>
+            型のXMLコメントにsummaryなし
+            </dummysummary>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy3">
+            <summary>
+                     
+            </summary>
+            <remarks>
+            型のsummaryに有効な値がない
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy4">
+            <summary>
+            型のsummaryが複数 
+            </summary>
+            <summary>
+                     
+            </summary>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy5">
+            <summary>
+            型のsummaryが敬体で書かれていない 
+            </summary>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy6">
+            <summary>
+            型のremarksが複数書かれています
+            </summary>
+            <remarks>
+            remarks1です。
+            </remarks>
+            <remarks>
+            remarks2です。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy7">
+            <summary>
+            型のremarksに有効な値がない
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy8">
+            <summary>
+            型のremarksが敬体で書かれていない。
+            </summary>
+            <remarks>
+            remaks1ずら。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy9">
+            <summary>
+            型のremarksが敬体で書かれていません。
+            </summary>
+            <remarks>
+            remaks1です
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy10">
+            <summary>
+            型サマリです。
+            </summary>
+            <remarks>
+            remaks1です
+            </remarks>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "M:CommentAnalyzerTest.Dummy10.Method02(System.Int32)" で無視されました -->
+        <member name="M:CommentAnalyzerTest.Dummy10.Method03">
+            <dummysummary>
+            メソッドサマリなし不正
+            </dummysummary>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method04">
+            <summary>
+            メソッドサマリが複数
+            </summary>
+            <summary>
+            メソッドサマリが複数
+            </summary>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method05">
+            <summary>
+               
+            </summary>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method06">
+            <summary>
+            メソッドサマリが敬体でない
+            </summary>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method07">
+            <summary>
+            remarksが複数あります
+            </summary>
+            <remarks>
+            remarksです
+            </remarks>
+            <remarks>
+            remarksです
+            </remarks>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method08">
+            <summary>
+            remarksに有効な値がありません
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method09">
+            <summary>
+            サマリです。
+            </summary>
+            <remarks>
+            remarksだ
+            </remarks>
+        </member>
+        <member name="M:CommentAnalyzerTest.Dummy10.Method10">
+            <summary>
+            正常系のサマリです。
+            </summary>
+            <remarks>
+            正常系のremaksです。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy11">
+            <summary>
+            型サマリです。
+            </summary>
+            <remarks>
+            remaks1です
+            </remarks>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "P:CommentAnalyzerTest.Dummy11.Property02" で無視されました -->
+        <member name="P:CommentAnalyzerTest.Dummy11.Property03">
+            <dummysummary>
+            プロパティサマリなし不正
+            </dummysummary>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property04">
+            <summary>
+            プロパティサマリが複数
+            </summary>
+            <summary>
+            プロパティサマリが複数
+            </summary>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property05">
+            <summary>
+               
+            </summary>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property06">
+            <summary>
+            プロパティサマリが敬体でない
+            </summary>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property07">
+            <summary>
+            remarksが複数あります
+            </summary>
+            <remarks>
+            remarksです
+            </remarks>
+            <remarks>
+            remarksです
+            </remarks>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property08">
+            <summary>
+            remarksに有効な値がありません
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property09">
+            <summary>
+            サマリです。
+            </summary>
+            <remarks>
+            remarksだ
+            </remarks>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Property10">
+            <summary>
+            正常系のサマリです。
+            </summary>
+            <remarks>
+            正常系のremaksです。
+            </remarks>
+        </member>
+        <member name="P:CommentAnalyzerTest.Dummy11.Item(System.Int32)">
+            <summary>
+            正常系のサマリです。
+            </summary>
+            <remarks>
+            正常系のremaksです。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Dummy12">
+            <summary>
+            型サマリです。
+            </summary>
+            <remarks>
+            remaks1です
+            </remarks>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "F:CommentAnalyzerTest.Dummy12.Field02" で無視されました -->
+        <member name="F:CommentAnalyzerTest.Dummy12.Field03">
+            <dummysummary>
+            フィールドサマリなし不正
+            </dummysummary>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field04">
+            <summary>
+            フィールドサマリが複数
+            </summary>
+            <summary>
+            フィールドサマリが複数
+            </summary>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field05">
+            <summary>
+               
+            </summary>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field06">
+            <summary>
+            フィールドサマリが敬体でない
+            </summary>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field07">
+            <summary>
+            remarksが複数あります
+            </summary>
+            <remarks>
+            remarksです
+            </remarks>
+            <remarks>
+            remarksです
+            </remarks>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field08">
+            <summary>
+            remarksに有効な値がありません
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field09">
+            <summary>
+            サマリです。
+            </summary>
+            <remarks>
+            remarksだ
+            </remarks>
+        </member>
+        <member name="F:CommentAnalyzerTest.Dummy12.Field10">
+            <summary>
+            正常系のサマリです。
+            </summary>
+            <remarks>
+            正常系のremaksです。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.DummyEnum">
+            <summary>
+            型サマリです。
+            </summary>
+            <remarks>
+            remaks1です
+            </remarks>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "F:CommentAnalyzerTest.DummyEnum.EnumMember02" で無視されました -->
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember03">
+            <dummysummary>
+            フィールドサマリなし不正
+            </dummysummary>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember04">
+            <summary>
+            フィールドサマリが複数
+            </summary>
+            <summary>
+            フィールドサマリが複数
+            </summary>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember05">
+            <summary>
+               
+            </summary>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember06">
+            <summary>
+            フィールドサマリが敬体でない
+            </summary>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember07">
+            <summary>
+            remarksが複数あります
+            </summary>
+            <remarks>
+            remarksです
+            </remarks>
+            <remarks>
+            remarksです
+            </remarks>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember08">
+            <summary>
+            remarksに有効な値がありません
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember09">
+            <summary>
+            サマリです。
+            </summary>
+            <remarks>
+            remarksだ
+            </remarks>
+        </member>
+        <member name="F:CommentAnalyzerTest.DummyEnum.EnumMember10">
+            <summary>
+            正常系のサマリです。
+            </summary>
+            <remarks>
+            正常系のremaksです。
+            </remarks>
+        </member>
+        <member name="T:CommentAnalyzerTest.Utility.LogUtility">
+            <summary>
+            dummy
+            </summary>
+        </member>
+        <member name="M:CommentAnalyzerTest.Utility.LogUtility.WarnLog(System.String,System.String,System.String)">
+            <summary>
+            dummy
+            </summary>
+            <param name="className">dummy</param>
+            <param name="methodName">dummy</param>
+            <param name="parameter">dummy</param>
+        </member>
+        <member name="M:CommentAnalyzerTest.Utility.LogUtility.ErrorLog(System.String,System.String,System.String)">
+            <summary>
+            dummy
+            </summary>
+            <param name="className">dummy</param>
+            <param name="methodName">dummy</param>
+            <param name="parameters">dummy</param>
+        </member>
+    </members>
+</doc>

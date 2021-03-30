@@ -8,14 +8,15 @@ using Microsoft.CodeAnalysis.Diagnostics;
 namespace CodeChecker.Third
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    class CommentLessPropertyCommentAnalyzer : PropertyCommentAnalyzer
+    internal class CommentLessPropertyCommentAnalyzer : PropertyCommentAnalyzer
     {
         protected override string Id => Define.ID_COMMENT_LESS_PROPERTY_COMMENT_ANALYZER;
         protected override string Title => "プロパティのコメント記述がありません";
         protected override string FormatedMessage => "プロパティ '{0}' にコメント記述がありません";
         protected override string Description => "プロパティ定義にはコメント記述が必要です";
 
-        protected override bool validate(DocumentComment comment) {
+        protected override bool validate(DocumentComment comment)
+        {
             return Predicates.CommentLessComment(comment);
         }
     }
